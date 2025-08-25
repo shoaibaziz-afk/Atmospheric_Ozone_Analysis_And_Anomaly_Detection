@@ -22,6 +22,13 @@ print(f"\n[ANOMALY COUNT] {anomaly_count} anomalies found out of {total_count} t
 
 plt.figure(figsize=(10, 6))
 
+# Save anomalies to new CSV.
+
+is_anomalies_file_path = 'ozone_data_with_anomalies.csv'
+data_subset.to_csv(is_anomalies_file_path, index=False)
+
+#######
+
 # Plot all normal points in grey
 plt.scatter(data_subset[~data_subset['is_anomaly']]['Ozone_ppbv'],
             data_subset[~data_subset['is_anomaly']]['Pressure'],
