@@ -7,7 +7,6 @@ from sklearn.model_selection import train_test_split
 import math
 from mpl_toolkits.mplot3d import Axes3D
 
-# Import your custom functions (assuming they're in separate files)
 from data_loading import load_data
 from explore_ozone import train_linear_model, analyze_residuals, plot_residual_histogram, plot_model_fit # Linear Model
 from find_anomalies import calculate_anomaly_thresholds, detect_anomalies, save_anomalies_to_csv, plot_anomalies # Anomalies Detection
@@ -15,6 +14,7 @@ from plot_more_anomalies import get_top_anomalies, plot_top_anomalies_context, c
 from create_cyclic_encoding import prepare_features, train_multi_factor_model, plot_geographic_anomalies, plot_anomaly_rate_heatmap
 from create_cyclic_encoding import plot_monthly_anomaly_rate, show_top_anomalies, plot_latitude_month_heatmap
 from create_cyclic_encoding import plot_monthly_facet_grid, plot_3d_anomaly_distribution
+from isolation_tree import run_isolation_tree
 
 def setup_directories():
     """Create necessary directories for output files"""
@@ -30,7 +30,6 @@ def run_linear_regression_analysis():
     print("LINEAR REGRESSION ANALYSIS")
     print("="*60)
     
-    # Load and preprocess data
     filepath = 'Receptor_western_NAmerica_ozone_obs_1994_2021_from900to300.csv'
     df = load_data(filepath)
     
@@ -113,7 +112,7 @@ def run_create_cyclic_encoding(data):
     
     return data_with_multi_anomalies, multi_model
 
-def generate_summary_report(data_linear, data_anomalies, data_multi, top_anoms, annual_rate):
+def generate_summary_report(data_linear, data_anomalies, data_multi, top_anoms, annual_rate, isolation_tree_result):
     """Generate a summary report of the analysis"""
     print("\n" + "="*60)
     print("ANALYSIS SUMMARY REPORT")
@@ -163,8 +162,11 @@ def main():
         # Run multi-factor analysis
         data_multi, multi_model = run_create_cyclic_encoding(data_anomalies)
         
+        # isolation_forest
+        isolation_tree_result = run_isolation_tree(data_multi)
+        print(f"Isolation Tree Result: {isolation_tree_result}")
         # Generate summary report
-        generate_summary_report(data_linear, data_anomalies, data_multi, top_anoms, annual_rate)
+        generate_summary_report(data_linear, data_anomalies, data_multi, top_anoms, annual_rate, isolation_tree_result)
         
         print("\n" + "="*60)
         print("✅ ANALYSIS COMPLETE!")
