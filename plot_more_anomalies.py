@@ -1,24 +1,24 @@
-from explore_ozone import data_subset
+from data_loading import df
 import matplotlib.pyplot as plt
 import pandas as pd
 
-def get_top_anomalies(data, n=200, residual_col='residual'):
+def get_top_anomalies(df, n=200, residual_col='residual'):
     """Get the top N most extreme anomalies by absolute residual value"""
-    top_anomalies = data.sort_values(by=residual_col, key=abs, ascending=False).head(n)
+    top_anomalies = df.sort_values(by=residual_col, key=abs, ascending=False).head(n)
     
     print(f"\n[TOP {n} MOST EXTREME ANOMALIES]")
     print(top_anomalies[['Pressure', 'Ozone_ppbv', 'predicted_ozone', 'residual']].to_string())
     
     return top_anomalies
 
-def plot_top_anomalies_context(data, top_anomalies, n=200, 
+def plot_top_anomalies_context(df, top_anomalies, n=200, 
                               ozone_col='Ozone_ppbv', pressure_col='Pressure',
                               save_path='figures/top_anomalies_context.png'):
-    """Plot top anomalies in context with all data points"""
+    """Plot top anomalies in context with all df points"""
     plt.figure(figsize=(10, 6))
     
     # Plot all points
-    plt.scatter(data[ozone_col], data[pressure_col], 
+    plt.scatter(df[ozone_col], df[pressure_col], 
                 alpha=0.1, s=2, color='grey', label='Normal')
     
     # Highlight the top anomalies
@@ -37,10 +37,10 @@ def plot_top_anomalies_context(data, top_anomalies, n=200,
     
     print(f"[PLOT SAVED] Top anomalies context plot saved to: {save_path}")
 
-def calculate_annual_anomaly_rate(data, anomaly_col='is_anomaly', year_col='Year'):
+def calculate_annual_anomaly_rate(df, anomaly_col='is_anomaly', year_col='Year'):
     """Calculate annual anomaly rates"""
-    annual_anomalies = data[data[anomaly_col]].groupby(year_col).size()
-    annual_total = data.groupby(year_col).size()
+    annual_anomalies = df[df[anomaly_col]].groupby(year_col).size()
+    annual_total = df.groupby(year_col).size()
     
     # Calculate anomaly rate per year
     annual_rate = (annual_anomalies / annual_total) * 100  # Percentage

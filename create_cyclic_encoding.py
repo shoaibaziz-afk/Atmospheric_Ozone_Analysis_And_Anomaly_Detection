@@ -1,10 +1,11 @@
-from explore_ozone import data_subset
+from data_loading import df
 import numpy as np
 from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
 import pandas as pd
 from mpl_toolkits.mplot3d import Axes3D
+import math
 
 def prepare_features(data):
     """Add cyclical month features to the dataset"""
