@@ -1,6 +1,6 @@
 from data_loading import df
 import matplotlib.pyplot as plt
-import pandas as pd
+
 
 def calculate_anomaly_thresholds(df, residual_col='residual'):
     """Calculate IQR-based anomaly thresholds"""

@@ -1,15 +1,7 @@
 import matplotlib.pyplot as plt
-import pandas as pd
 from sklearn.linear_model import LinearRegression
 import numpy as np
 from data_loading import df
-
-# def load_and_preprocess_df(filepath):
-#     """Load df and filter by pressure range"""
-#     df = pd.read_csv(filepath)
-#     df_subset = df[(df['Pressure'] >= 300) & (df['Pressure'] <= 900)].copy()
-#     print(f"Loaded df with {len(df_subset)} rows after pressure filtering")
-#     return df_subset
 
 X = df['Pressure']
 Y = df['Ozone_ppbv']
