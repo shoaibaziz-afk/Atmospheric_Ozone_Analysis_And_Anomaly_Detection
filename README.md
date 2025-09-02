@@ -32,6 +32,7 @@ A comprehensive machine learning pipeline for identifying unusual ozone measurem
 6. Program Structure
 
 Atmospheric_Ozone_Detection_System/
+```
 |-- data_loading.py
 |-- explore_ozone.py
 |-- find_anomalies.py
@@ -47,6 +48,7 @@ Atmospheric_Ozone_Detection_System/
 |-- .gitignore
 |-- figures/
 |-- models/
+```
 |-- results/
 |-- sadvenv/
 |-- .vscode/
