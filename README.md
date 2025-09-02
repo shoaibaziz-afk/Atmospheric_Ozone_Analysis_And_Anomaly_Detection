@@ -19,6 +19,7 @@ A comprehensive machine learning pipeline for identifying unusual ozone measurem
 
 4. Graphs Plotted
 4.1. Distribution of model residuals (Shows the frequency of a particular residual irrespective of location and time of observation).
+   
 4.2. Linear fitting of ozone levels with pressure(altitute). (Shows a linear fitting of supposed level of ozone by altitude).
 4.3. Interquartile anomalies (Plots anomalies based on a predefined interquartile of normal considered ozone levels.)
 4.4. Top n anomalies (Plots the top n anomalies on the linear model irrespective of location and time of observation.)
@@ -28,26 +29,25 @@ A comprehensive machine learning pipeline for identifying unusual ozone measurem
 4.8. Anomaly rates by latitude and month (Plots anomalies by latitude and longitude for every month (a set of 12 graphs)).
 4.9. 3D depiction of anomaly rate by latitude, longitude and month (Same graph as above but in 3D).
 
-5. Program Structure
+6. Program Structure
 
-spacecraft-anomaly-detection/
-├── data_loading.py
-├── explore_ozone.py
-├── find_anomalies.py
-├── isolation_tree.py
-├── plot_more_anomalies.py
-├── create_cyclic_encoding.py
-├── main.py
-├── main2.py
-├── Receptor_western_NAmerica_ozone_obs_1994_2021_from900to300.csv
-├── ozone_data_with_anomalies.csv
-├── ozone_df_with_anomalies.csv
-├── requirements.txt
-├── README.md
-├── .gitignore
-├── figures/
-├── models/
-├── results/
-├── sadvenv/
-├── .vscode/
-└── .git/
+Atmospheric_Ozone_Detection_System/
+|-- data_loading.py
+|-- explore_ozone.py
+|-- find_anomalies.py
+|-- isolation_tree.py
+|-- plot_more_anomalies.py
+|-- create_cyclic_encoding.py
+|-- main.py
+|-- Receptor_western_NAmerica_ozone_obs_1994_2021_from900to300.csv
+|-- ozone_data_with_anomalies.csv
+|-- ozone_df_with_anomalies.csv
+|-- requirements.txt
+|-- README.md
+|-- .gitignore
+|-- figures/
+|-- models/
+|-- results/
+|-- sadvenv/
+|-- .vscode/
+|-- .git/
