@@ -58,11 +58,49 @@ Atmospheric_Ozone_Detection_System/
 ```
 6. Installation
 # Clone repository
-git clone 
-cd spacecraft-anomaly-detection
+git clone https://github.com/shoaibaziz-afk/Atmospheric_Ozone_Analysis_And_Anomaly_Detection.git
+cd Atmospheric_Ozone_Analysis_And_Anomaly_Detection
 
 # Install dependencies
 pip install -r requirements.txt
 ```
 ```
 7. Run Full Analysis Pipeline
+python3 main.py
+```
+```
+8. Individual Analysis Stages
+# Run specific components
+from explore_ozone import run_linear_regression_analysis
+from isolation_tree import run_isolation_tree
+
+data, model = run_linear_regression_analysis()
+results = run_isolation_tree(data)
+```
+```
+9. Data Exploration
+# Run specific components
+from explore_ozone import run_linear_regression_analysis
+from isolation_tree import run_isolation_tree
+
+data, model = run_linear_regression_analysis()
+results = run_isolation_tree(data)
+```
+```
+10. Contributing
+This project follows data science best practices:
+
+Raw data preservation
+Modular, reproducible analysis
+Comprehensive documentation
+Version control with meaningful commits
+```
+```
+11. Future Enhancement: Real Time Ozone Monitoring System
+```
+```
+12. Author
+Shoaib Aziz
+Aerospace Engineer, Moscow Aviation Instititute (National Research University)
+Linkden: www.linkedin.com/in/shoaib-aziz-a02374223
+```
