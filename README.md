@@ -58,7 +58,7 @@ Atmospheric_Ozone_Detection_System/
 ```
 6. Installation
 # Clone repository
-git clone https://github.com/shoaibaziz-afk/.git
+git clone 
 cd spacecraft-anomaly-detection
 
 # Install dependencies
