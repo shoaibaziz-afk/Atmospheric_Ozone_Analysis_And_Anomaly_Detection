@@ -1,4 +1,4 @@
-# Atmosphereic Ozone Anomaly Detection
+# Atmosphereic Ozone Analysis and Anomaly Detection
 
 A comprehensive machine learning pipeline for identifying unusual ozone measurements across Western North America using multiple statistical and machine learning approaches. This project demonstrates advanced time-series analysis, geospatial visualization, and anomaly detection techniques.
 
@@ -50,9 +50,19 @@ Atmospheric_Ozone_Detection_System/
 |-- .gitignore
 |-- figures/
 |-- models/
-
 |-- results/
 |-- sadvenv/
 |-- .vscode/
 |-- .git/
 ```
+```
+6. Installation
+# Clone repository
+git clone https://github.com/shoaibaziz-afk/.git
+cd spacecraft-anomaly-detection
+
+# Install dependencies
+pip install -r requirements.txt
+```
+```
+7. Run Full Analysis Pipeline
