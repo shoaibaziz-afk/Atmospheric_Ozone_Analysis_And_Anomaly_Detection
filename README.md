@@ -105,10 +105,5 @@ Aerospace Engineer, Moscow Aviation Instititute (National Research University)
 Linkden: www.linkedin.com/in/shoaib-aziz-a02374223
 ```
 ```
-13.
-## Project Preview
 
-Here is a screenshot of the application in action:
-
-![Screenshot of the main application interface](figures/02_ozone_timeseries.png)
 ```
