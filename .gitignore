@@ -27,8 +27,6 @@ MANIFEST
 sadvenv/
 .env/
 
-# Data and models - IGNORE EVERYTHING IN THESE FOLDERS
-figures/
 
 # IDE
 .vscode/
