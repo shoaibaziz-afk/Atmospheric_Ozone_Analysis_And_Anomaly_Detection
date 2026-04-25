@@ -57,7 +57,8 @@ Atmospheric_Ozone_Detection_System/
 |-- .git/
 ```
 ```
-6. Installation
+# Quick Start
+  Installation
 # Clone repository
 git clone https://github.com/shoaibaziz-afk/Atmospheric_Ozone_Analysis_And_Anomaly_Detection.git
 cd Atmospheric_Ozone_Analysis_And_Anomaly_Detection
