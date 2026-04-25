@@ -63,7 +63,8 @@ Atmospheric_Ozone_Detection_System/
 git clone https://github.com/shoaibaziz-afk/Atmospheric_Ozone_Analysis_And_Anomaly_Detection.git
 cd Atmospheric_Ozone_Analysis_And_Anomaly_Detection
 
-# Install dependencies
+# Usage
+  Install dependencies
 pip install -r requirements.txt
 ```
 ```
