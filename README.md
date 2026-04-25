@@ -1,5 +1,6 @@
 # Atmosphereic Ozone Analysis and Anomaly Detection
 
+# Motivation 
 A comprehensive machine learning pipeline for identifying unusual ozone measurements across Western North America using multiple statistical and machine learning approaches. This project demonstrates advanced time-series analysis, geospatial visualization, and anomaly detection techniques.
 
 ```
